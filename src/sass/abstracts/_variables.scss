@@ -1,3 +1,72 @@
 /* ********* */
 /* @VARIABLES */
 /* ********* */
+
+$rectangulos: (
+    r1: #2C5271,
+    r2: #509A9D,
+    r3: #70C197,
+    r4: #92DF9A,
+    r5: #D5F2D3
+);
+
+$circulos: (
+    c1: linear-gradient(to bottom right, #315C79, #478A90),
+    c2: linear-gradient(to bottom right, #569F9C, #6AB999),
+    c3: linear-gradient(to bottom right, #8BDB99, #76C79A),
+    c4: linear-gradient(to bottom right, #88D19D, #5DA89E),
+    c5: linear-gradient(to bottom right, #C3E9C6, #84C9A3),
+);
+
+
+@each $red, $color in $rectangulos {
+    .#{$red}{
+        background-color: $color;
+    }
+
+    .#{$red}::hover{
+        background-color: darken($color, 50%);
+    }
+}
+
+
+
+
+@each $red, $color in $circulos {
+    .#{$red}{
+        background: $color
+    }
+}
+.rectangulos{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.forma{
+    width: 200px;
+    height: 500px;
+    border-radius: 150px;
+    box-shadow: 10px 10px 10px 5px #F7F7F7;
+}
+
+.circulos{
+    display: flex;
+    justify-content: space-around;
+}
+
+.forma2{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 10px 10px 10px 5px #F7F7F7;
+}
+
+.texto{
+    display: flex;
+    justify-content: space-around;
+}
+
+body{
+    padding: 45px;
+
+}
